@@ -1,17 +1,19 @@
 # mujoco-simulate-csv-replay
-A change to mujoco simulate used to replay models with pause, fast forward, half speed, and frame by frame functionality.
-
 Prerequisites
+-------------
 
-Install and verify mujoco 2.2.1 :
+**Install and verify mujoco 2.2.1**
+
 Go to https://pab47.github.io/mujoco.html
 
 Scroll to No. 0 then follow the guide in either video form, or from the “description” tab
 
 I would recommend any debian based linux distribution for using/working on this project
+
 Clone the repository from https://github.com/Trojak0/mujoco-simulate-csv-replay
 
-After installation
+After Installation
+-----------------
 
 In a terminal, navigate to “sample” located in /extended_gui_with_csv_replay/mujoco-2.2.1/sample
 
@@ -21,15 +23,16 @@ If some dependencies are not installed, install them. They should be installed i
 
 This will launch a GLFW window with the a1_arm.xml and data.csv loaded and the following features will be available:
 
-*Time slider, used to scrub through the joint playback
+* Time slider, used to scrub through the joint playback
 
-*Play speed, used to set the replay speed of the csv joint movement replay
+* Play speed, used to set the replay speed of the csv joint movement replay
 
-*A button to go back a frame in the CSV data, marked with “<<”
+* A button to go back a frame in the CSV data, marked with “<<”
 
-*A button to go forward a frame in the CSV data, marked with “>>”
+* A button to go forward a frame in the CSV data, marked with “>>”
 
-*A button to set the play speed to half speed, that plays the replay from where the time slider is set to
+* A button to set the play speed to half speed, that plays the replay from where the time slider is set to
+
 
 Some not so obvious specifics are that the “Play” button is only for playing the replay at the speed set to in the “Play Speed” slider, i.e. playing at half speed, then pressing stop, then pressing play again will result in the player playing at the speed set by the “Play Speed” slider.
 
