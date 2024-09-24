@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="object_hardware">
+   <worldbody>
+      <body euler="0 0 0" name="object1" pos="1.256 0.943 0.075">
+         <inertial diaginertia="0.01 0.01 0.01" mass="0.1" pos="0 0 0"/>
+         <joint type="free"/>
+         <geom rgba="0.73 0.55 0.32 1" size="0.125 0.18 0.075" type="box"/>
+         <site name="object1_site" pos="0 0 0" size="0.01"/>
+      </body>
+      <body euler="0 0 0" name="goal" pos="3.086 0.92 0.8">
+         <geom rgba="0.1 0.9 0.1 0.1" size="0.01" type="sphere" mass="0.1"/>
+         <site name="goal_site" pos="0 0 0" size="0.01"/>
+      </body>
+   </worldbody>
+   <sensor>
+      <framepos name="object1_pos" objname="object1_site" objtype="site"/>
+      <framepos name="goal_pos" objname="goal_site" objtype="site"/>
+   </sensor>
+</mujoco>

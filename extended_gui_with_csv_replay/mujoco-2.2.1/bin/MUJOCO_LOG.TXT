@@ -1,0 +1,57 @@
+Mon Jul 29 10:47:48 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Mon Jul 29 10:48:52 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Mon Jul 29 10:51:14 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Mon Jul 29 10:51:55 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Mon Jul 29 10:53:32 2024
+ERROR: mjui_add: item defined outside section
+
+Mon Jul 29 10:54:00 2024
+ERROR: mjui_add: item defined outside section
+
+Mon Jul 29 10:54:13 2024
+ERROR: mjui_add: item defined outside section
+
+Mon Jul 29 10:55:26 2024
+ERROR: mjui_add: item defined outside section
+
+Mon Jul 29 10:56:30 2024
+ERROR: mjui_add: item defined outside section
+
+Mon Jul 29 10:57:16 2024
+ERROR: mjui_add: item defined outside section
+
+Tue Aug  6 11:24:26 2024
+ERROR: mjui_add: invalid edit length
+
+Thu Aug  8 08:51:50 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Thu Aug  8 09:09:05 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 9. The simulation is unstable. Time = 22.5895.
+
+Fri Aug  9 11:07:57 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Fri Aug  9 11:09:57 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Fri Aug  9 11:12:32 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Fri Aug  9 11:12:50 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Fri Aug  9 11:14:40 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+
+Fri Aug  9 11:15:15 2024
+ERROR: mjui_add: slider expects 'min max [div]'
+

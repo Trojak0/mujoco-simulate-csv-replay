@@ -1,0 +1,32 @@
+# This Makefile assumes that you have GLFW libraries and headers installed on,
+# which is commonly available through your distro's package manager.
+# On Debian and Ubuntu, GLFW can be installed via `apt install libglfw3-dev`.
+
+COMMON=-O2 -I../include -L../lib -std=c++17 -pthread -Wl,-no-as-needed -Wl,-rpath,'$$ORIGIN'/../lib
+COMMON_DEBUG=-O0 -g -I../include -L../lib -std=c++17 -pthread -Wl,-no-as-needed -Wl,-rpath,'$$ORIGIN'/../lib
+
+all:
+	g++ slider_size_program.cc                               -o ../sample/slider_size_program
+	../sample/slider_size_program
+	$(CXX) $(COMMON) testxml.cc            -lmujoco          -o ../bin/testxml
+	$(CXX) $(COMMON) testspeed.cc          -lmujoco          -o ../bin/testspeed
+	$(CXX) $(COMMON) compile.cc            -lmujoco          -o ../bin/compile
+	$(CXX) $(COMMON) derivative.cc         -lmujoco -fopenmp -o ../bin/derivative
+	$(CXX) $(COMMON) basic.cc              -lmujoco -lglfw   -o ../bin/basic
+	$(CXX) $(COMMON) record.cc             -lmujoco -lglfw   -o ../bin/record
+	$(CC) -c -O2 -I../include uitools.c
+	$(CXX) $(COMMON) uitools.o simulate.cc -lmujoco -lglfw   -o ../bin/simulate
+	rm *.o
+	../bin/./simulate ../model/a1_arm.xml
+
+debug:
+	$(CXX) $(COMMON_DEBUG) testxml.cc      -lmujoco          -o ../bin/testxml_debug
+	$(CXX) $(COMMON_DEBUG) testspeed.cc    -lmujoco          -o ../bin/testspeed_debug
+	$(CXX) $(COMMON_DEBUG) compile.cc      -lmujoco          -o ../bin/compile_debug
+	$(CXX) $(COMMON_DEBUG) derivative.cc   -lmujoco -fopenmp -o ../bin/derivative_debug
+	$(CXX) $(COMMON_DEBUG) basic.cc        -lmujoco -lglfw   -o ../bin/basic_debug
+	$(CXX) $(COMMON_DEBUG) record.cc       -lmujoco -lglfw   -o ../bin/record_debug
+	$(CC) -c -O0 -g -I../include uitools.c
+	$(CXX) $(COMMON_DEBUG) uitools.o simulate.cc -lmujoco -lglfw -o ../bin/simulate_debug
+	rm *.o
+
