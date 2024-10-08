@@ -1,4 +1,8 @@
 # mujoco-simulate-csv-replay
+Video Demonstration
+-------------
+https://youtu.be/jYlf2gbSums
+
 Prerequisites
 -------------
 
